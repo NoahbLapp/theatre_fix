@@ -34,7 +34,7 @@ public class App_test {
         customerList.add(customer5);
         customerList.add(customer6);
 
-        theater = new Theater(3, 2, customerList);
+        theater = new Theater(4, 2, customerList);
     }
 
     @Test
@@ -44,12 +44,12 @@ public class App_test {
 
     @Test
     public void testIsSeatOccupied_SeatNotOccupied() {
-        assertFalse(theater.isSeatOccupied(2, 1));
+        assertFalse(theater.isSeatOccupied(3, 1));
     }
 
     @Test
     public void testIsSeatOccupied_BoundaryCase() {
-        assertFalse(theater.isSeatOccupied(2, 1));
+        assertFalse(theater.isSeatOccupied(4, 1));
     }
 
     @Test
