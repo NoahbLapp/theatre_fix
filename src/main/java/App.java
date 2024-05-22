@@ -20,6 +20,8 @@ public class App {
 		
 		ArrayList<Customer> customerList1 = getList1();
 		Theater theater1 = new Theater(5, 4, customerList1);
+		System.out.println("This is what our theatre looks like:");
+		System.out.println(theater1);
 
 		System.out.println("**********************************");
 		System.out.println("isOccupied test");
@@ -38,7 +40,8 @@ public class App {
 		ArrayList<Customer> customerList2 = getList2();
 		Theater theater2 = new Theater(7, 6, customerList2);
 
-
+		System.out.println("We have created a new theatre. This is what our new theatre looks like:");
+		System.out.println(theater2);
 		System.out.println("Most occupied row test. \n The most occupied row is row 6 \nYou said the most occupied row was " + theater2.findMostOccupiedRow());
 		
 
