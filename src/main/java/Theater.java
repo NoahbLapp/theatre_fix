@@ -71,9 +71,10 @@ public class Theater {
 
  /*
   * This method should return a list of Customers who need to have their seats
-  * moved
-  * because there is someone more than 3 inches taller than them sitting directly
-  * in front of them (one row closer, but in the same seat).
+  * move because there is someone more than 3 inches shorter than them sitting directly
+  * behind them (one row further back, but in the same seat).
+  * We are moving the TALL person.
+  *
   *
   * This method does not actually change any seats, but constructs and returns a
   * NEW
