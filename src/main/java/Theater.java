@@ -47,11 +47,11 @@ public class Theater {
   * This method should return true if the seat is occupied, false otherwise.
   */
  public boolean isSeatOccupied(int row, int col) {
- 
-
-    // placeholder
-    return false;
-
+   if(this.seats[row][col] != null){
+      return true;
+   }else{
+      return false;
+   }
  }
 
  /*
@@ -59,15 +59,37 @@ public class Theater {
   * seats
   */
  public int findMostOccupiedRow() {
-    return -1;// placeholder
+   int largestRow = 0;
+   for(int row = 0; row < this.seats.length; row++){
+      int rowSize = 1;
+      for(int col = 0; col < this.seats[0].length; col++){
+         if(this.isSeatOccupied(row, col)){
+            rowSize ++;
+         }
+      }
+      if(rowSize > largestRow){
+         largestRow = rowSize;
+      }
+   }
+   return largestRow;
  }
 
  /*
   * This method should return the tallest customer in the theater
   */
  public Customer getTallestCustomer() {
-    return null;
- }
+   int tallestCustomerHeight = 0;
+   Customer tallestCustomer = null;
+   for(int row = 0; row < this.seats.length; row++){
+      for(int col = 0; col < this.seats[0].length; col++){
+         if(this.isSeatOccupied(row, col) && this.seats[row][col].getHeight() > tallestCustomerHeight){
+            tallestCustomer = this.seats[row][col];
+            tallestCustomerHeight = this.seats[row][col].getHeight();
+         }
+      }
+   }
+   return tallestCustomer;
+}
 
  /*
   * This method should return a list of Customers who need to have their seats
@@ -83,7 +105,19 @@ public class Theater {
   * is more than 3 inches taller than they are.
   */
  public ArrayList<Customer> getCustomersToBeMoved() {
-    return null;
+   ArrayList<Customer> toBeMoved = new ArrayList<>();
+   for(int row = 1; row < this.seats.length; row++){
+      for(int col = 0; col < this.seats[0].length; col++){
+         if(this.isSeatOccupied(row, col)){
+            if(this.isSeatOccupied(row-1,col)){
+               if(this.seats[row][col].getHeight() - this.seats[row-1][col].getHeight() >= 3){
+                  toBeMoved.add(this.seats[row][col]);
+               }
+            }
+         }
+      }
+   }
+   return toBeMoved;
  }
 
  /*

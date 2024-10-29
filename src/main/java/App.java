@@ -90,6 +90,7 @@ public class App {
 		customerList2.add(new Customer("Jack", 77));
 		customerList2.add(null);
 		customerList2.add(null);
+		//
 		customerList2.add(new Customer("Peter", 70));
 		customerList2.add(new Customer("Hannah", 70));
 		customerList2.add(null);
@@ -98,6 +99,7 @@ public class App {
 
 		customerList2.add(new Customer("Jenny", 64));
 		customerList2.add(new Customer("Michele", 66));
+		//
 		customerList2.add(null);
 		customerList2.add(new Customer("Ricky", 70));
 		customerList2.add(null);
@@ -105,6 +107,7 @@ public class App {
 		customerList2.add(new Customer("Niko", 70));
 		customerList2.add(null);
 		customerList2.add(null);
+		//
 		customerList2.add(null);
 
 		customerList2.add(new Customer("Chris", 67));
@@ -113,6 +116,7 @@ public class App {
 
 		customerList2.add(new Customer("LaQuane", 77));
 		customerList2.add(null);
+		//
 		customerList2.add(null);
 
 		customerList2.add(new Customer("Drew", 78));
@@ -121,6 +125,7 @@ public class App {
 		customerList2.add(null);
 		customerList2.add(new Customer("Samuel", 65));
 		customerList2.add(null);
+		//
 		customerList2.add(null);
 		customerList2.add(new Customer("Deja", 66));
 		customerList2.add(new Customer("Will", 74));
@@ -129,7 +134,7 @@ public class App {
 
 		customerList2.add(new Customer("Edward", 70));
 		customerList2.add(new Customer("Nick", 72));
-
+//
 		customerList2.add(null);
 		customerList2.add(new Customer("Jamus", 66));
 		customerList2.add(new Customer("Carey", 62));
